@@ -19,8 +19,12 @@ public class SimpleController {
   @GetMapping("welcome2")
   @ResponseBody
   public String sayWelcome2() {
-    return "welcome to KEA";
+    return "Welcome to KEA";
   }
 
+  @GetMapping("welcome3")
+  public String sayWelcome3() {
+    return "welcomeTemplate";
+  }
 
 }

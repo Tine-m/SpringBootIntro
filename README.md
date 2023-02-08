@@ -50,7 +50,7 @@ Hvis vi i IntelliJ lokalt på egen maskine starter en Tomcat webserver,
 kan vi fra en browser skrive http://localhost:8080/welcome.html, hvorefter server-programmet sender flg. svar til browseren (HTTP Response): 
 - En statuskode 200, som betyder alt er gået OK
 - Header informationer, f.eks. 
-  - at resourcen, som serveren sender til browseren er i tekst (HTML) format  
+  - at resourcen, som serveren sender til browseren er en webside i HTML  
   - at der kommunikeres over HTTP version 1. (Der findes også en version 2)
 
 ![image](src/main/resources/images/http_response_header.PNG)
@@ -70,7 +70,7 @@ Den skal vi  bruge til at manipulere webserverens HTTP Response, dvs. dét svar 
 
 ```ResponseEntity```repræsenterer et HTTP Response, inklusiv headers, body og status. 
 I Spring findes også ```@ResponseBody```, som man kan annotere sin HTTP request handler metode med. 
-Forskellen er at den placerer retursvaret fra serveren *inde* i response body, hvorimod ```ResponseEntity``` tillader os at tilføje header og statuskode.
+Forskellen er at den metode placerer retursvaret fra serveren *inde* i response body, hvorimod ```ResponseEntity``` tillader os at tilføje headerinformationer og statuskode.
 
 ```@Controller
 public class SimpleController {
@@ -83,7 +83,12 @@ public class SimpleController {
   @GetMapping("welcome2")
   @ResponseBody
   public String sayWelcome2() {
-    return "welcome to KEA";
+    return "Welcome to KEA";
   }
 } 
 ```
+Metoden ```sayWelcome```i```SimpleController```kaldes, når dette endpoint angives i browseren: ``localhost:8080/welcome``
+Response pakkes ind i en ```ResponseEntity``` sammen med en HTTP statuskode.
+
+Metoden```sayWelcome2```kaldes, når dette endpoint angives i browseren: ``localhost:8080/welcome2``
+Response body bliver en tekststreng```Welcome to KEA```
