@@ -7,7 +7,7 @@ Det centrale du skal kende til for at kunne forstå netværksprogrammering er:
 - Port-numre - hvilket program på computeren ønsker man at tale med
 - Protokol - hvordan vi skal snakke, når der er oprettet forbindelse
 
-# Internettets opbygning
+## Internettets opbygning
 Når man skriver en URL i browseren og får svar tilbage fra serveren kommer alle dele i brug.
 
 En HTTP URL ser ud på denne måde: http://ipaddress:port/path?query.
@@ -46,7 +46,8 @@ HTTP er en protokol som bruges mellem en browser (klienten) og en webserver.
 
 Generelt beskriver en protokol hvad serveren regner med at klienten skriver til serveren, og hvad klienten kan forvente at serveren svarer.
 
-Hvis vi i IntelliJ lokalt på egen maskine starter en Tomcat webserver, kan vi fra en browser skrive http://localhost:8080/welcome.html, svarer server programmet browseren med følgende besked (HTTP response message-Header info):
+Hvis vi i IntelliJ lokalt på egen maskine starter en Tomcat webserver, 
+kan vi fra en browser skrive http://localhost:8080/welcome.html, hvorefter server programmet svarer browseren med følgende besked (HTTP response message-Header info):
 
 ![image](src/main/resources/images/http response header.PNG)
 
