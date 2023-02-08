@@ -53,8 +53,8 @@ kan vi fra en browser skrive http://localhost:8080/welcome.html, hvorefter serve
   - at resourcen, som serverer sender til browseren er i tekst (HTML) format  
   - at der kommunikeres over HTTP version 1. (Der findes også en version 2)
 
-- ![image](src/main/resources/images/http_response_header.PNG)
+![image](src/main/resources/images/http_response_header.PNG)
 
 - Selve indholdet af HTML siden (HTTP Response Body):
 
-- ![image](src/main/resources/images/http_response_body.PNG)
+![image](src/main/resources/images/http_response_body.PNG)
