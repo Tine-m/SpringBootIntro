@@ -35,7 +35,7 @@ En webserver lytter ofte på port 80, men kan man kan bruge et vilkårligt portn
 Der er visse begrænsninger på portnumre under 1024 da de er 
 
 [reserveret til diverse standarder](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
-<p>Bemærk - man kan godt have klient og server på samme maskine. Der er et særligt navn der hedder localhost (som har ip nummer 127.0.0.1).</p>
+<p>Bemærk - man kan godt have klient og server på samme maskine. Der er et særligt navn der hedder localhost (som har IP nummer 127.0.0.1).</p>
 
 ## Klient og Server
 I eksemplerne ovenfor er det en browser der snakker med en webserver. 
@@ -47,10 +47,14 @@ HTTP er en protokol som bruges mellem en browser (klienten) og en webserver.
 Generelt beskriver en protokol hvad serveren regner med at klienten skriver til serveren, og hvad klienten kan forvente at serveren svarer.
 
 Hvis vi i IntelliJ lokalt på egen maskine starter en Tomcat webserver, 
-kan vi fra en browser skrive http://localhost:8080/welcome.html, hvorefter server programmet svarer browseren med følgende besked (HTTP response message-Header info):
+kan vi fra en browser skrive http://localhost:8080/welcome.html, hvorefter server-programmet sender flg. svar til browseren (HTTP Response): 
+- En statuskode 200, som betyder alt er gået OK
+- Header informationer, f.eks. 
+  - at resourcen, som serverer sender til browseren er i tekst (HTML) format  
+  - at der kommunikeres over HTTP version 1. (Der findes også en version 2)
 
-![image](src/main/resources/images/http_response_header.PNG)
+- ![image](src/main/resources/images/http_response_header.PNG)
 
-Og selve indholdet af HTML siden (HTTP response message-Body):
+- Selve indholdet af HTML siden (HTTP Response Body):
 
-![image](src/main/resources/images/http_response_body.PNG)
+- ![image](src/main/resources/images/http_response_body.PNG)
