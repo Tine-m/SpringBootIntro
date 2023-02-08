@@ -12,13 +12,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class SimpleController {
 
   @GetMapping("welcome")
-  @ResponseBody
-  public String sayWelcome() {
-    return "welcome to KEA";
+  public ResponseEntity<String> sayWelcome() {
+    return new ResponseEntity<>("Welcome to KEA", HttpStatus.OK);
   }
 
   @GetMapping("welcome2")
-  public ResponseEntity<String> sayWelcome2() {
-    return new ResponseEntity<>("Welcome to KEA", HttpStatus.OK);
+  @ResponseBody
+  public String sayWelcome2() {
+    return "welcome to KEA";
   }
+
+
 }

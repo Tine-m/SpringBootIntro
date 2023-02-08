@@ -76,13 +76,14 @@ Forskellen er at den placerer retursvaret fra serveren *inde* i response body, h
 public class SimpleController {
 
   @GetMapping("welcome")
-  @ResponseBody
-  public String sayWelcome() {
-    return "welcome to KEA";
-  }
-
-  @GetMapping("welcome2")
-  public ResponseEntity<String> sayWelcome2() {
+  public ResponseEntity<String> sayWelcome() {
     return new ResponseEntity<>("Welcome to KEA", HttpStatus.OK);
   }
-}```
+  
+  @GetMapping("welcome2")
+  @ResponseBody
+  public String sayWelcome2() {
+    return "welcome to KEA";
+  }
+} 
+```
