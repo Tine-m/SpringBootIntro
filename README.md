@@ -49,8 +49,8 @@ Generelt beskriver en protokol hvad serveren regner med at klienten skriver til 
 Hvis vi i IntelliJ lokalt på egen maskine starter en Tomcat webserver, 
 kan vi fra en browser skrive http://localhost:8080/welcome.html, hvorefter server programmet svarer browseren med følgende besked (HTTP response message-Header info):
 
-![image](src/main/resources/images/http response header.PNG)
+![image](src/main/resources/images/http_response_header.PNG)
 
 Og selve indholdet af HTML siden (HTTP response message-Body):
 
-![image](src/main/resources/images/http response body.PNG)
+![image](src/main/resources/images/http_response_body.PNG)
