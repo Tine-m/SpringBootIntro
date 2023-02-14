@@ -48,9 +48,9 @@ Generelt beskriver en protokol hvad serveren regner med at klienten skriver til 
 
 Hvis vi i IntelliJ lokalt på egen maskine starter en Tomcat webserver, 
 kan vi fra en browser skrive http://localhost:8080/welcome.html, hvorefter server-programmet sender flg. svar til browseren (HTTP Response): 
-- En statuskode 200, som betyder alt er gået OK
+- En statuskode 200, som betyder alt er gået OK (hvis serveren er oppe og køre og URL er valid)
 - Header informationer, f.eks. 
-  - at resourcen, som serveren sender til browseren er en webside i HTML  
+  - at resourcen, som serveren sender til browseren er en webside (HTML)  
   - at der kommunikeres over HTTP version 1. (Der findes også en version 2)
 
 ![image](src/main/resources/images/http_response_header.PNG)
